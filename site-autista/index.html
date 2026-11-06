@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espaço calmo, colorido e acessível com informações e recursos para pessoas autistas.">
+  <title>Espaço Calmo – Informações e Recursos para Pessoas Autistas</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-icone" aria-hidden="true">🌿</span>
+        <span class="logo-texto">Espaço Calmo</span>
+      </div>
+
+      <div class="controles-acessibilidade" role="group" aria-label="Controles de acessibilidade">
+        <button id="btn-contraste" class="btn-controle" aria-pressed="false" title="Alternar alto contraste">
+          Alto contraste
+        </button>
+        <button id="btn-fonte" class="btn-controle" aria-pressed="false" title="Aumentar tamanho da fonte">
+          Fonte maior
+        </button>
+        <button id="btn-reducao-movimento" class="btn-controle" aria-pressed="false" title="Reduzir animações">
+          Reduzir movimento
+        </button>
+      </div>
+
+      <button class="btn-menu" id="btn-menu" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+        Menu
+      </button>
+
+      <nav id="menu-principal" class="navegacao" aria-label="Menu principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre o autismo</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- HERO -->
+    <section id="inicio" class="secao hero" aria-labelledby="titulo-hero">
+      <div class="container">
+        <h1 id="titulo-hero">Um espaço calmo, colorido e previsível</h1>
+        <p class="lead">
+          Site criado com foco em acessibilidade e neurodiversidade. 
+          Aqui você encontra informações claras e um ambiente acolhedor.
+        </p>
+        <a href="#recursos" class="btn-principal">Ver recursos disponíveis</a>
+      </div>
+    </section>
+
+    <!-- SOBRE O AUTISMO -->
+    <section id="sobre" class="secao secao-sobre" aria-labelledby="titulo-sobre">
+      <div class="container">
+        <h2 id="titulo-sobre">Sobre o autismo</h2>
+        
+        <div class="cards-grid">
+          <article class="card card-1">
+            <h3>O que é o autismo?</h3>
+            <p>
+              O Transtorno do Espectro Autista (TEA) é uma condição do neurodesenvolvimento 
+              que afeta a forma como a pessoa se comunica, interage e processa informações sensoriais.
+            </p>
+          </article>
+
+          <article class="card card-2">
+            <h3>Cada pessoa é única</h3>
+            <p>
+              O espectro é amplo. Algumas pessoas precisam de mais apoio no dia a dia, 
+              outras são altamente independentes. Não existe uma única forma de ser autista.
+            </p>
+          </article>
+
+          <article class="card card-3">
+            <h3>Pontos fortes comuns</h3>
+            <p>
+              Muitas pessoas autistas têm excelente atenção a detalhes, memória visual, 
+              honestidade, lealdade e capacidade de foco profundo em interesses específicos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section id="recursos" class="secao secao-recursos" aria-labelledby="titulo-recursos">
+      <div class="container">
+        <h2 id="titulo-recursos">Recursos úteis</h2>
+        <p class="intro-secao">Materiais selecionados com linguagem clara e direta.</p>
+
+        <ul class="lista-recursos">
+          <li>
+            <a href="#" class="item-recurso">
+              <span class="recurso-titulo">Guia de direitos da pessoa autista</span>
+              <span class="recurso-descricao">Informações sobre leis e benefícios no Brasil</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item-recurso">
+              <span class="recurso-titulo">Estratégias de regulação sensorial</span>
+              <span class="recurso-descricao">Técnicas simples para momentos de sobrecarga</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item-recurso">
+              <span class="recurso-titulo">Comunicação alternativa e aumentativa</span>
+              <span class="recurso-descricao">Recursos de CAA e pictogramas</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="item-recurso">
+              <span class="recurso-titulo">Rotinas visuais para download</span>
+              <span class="recurso-descricao">Modelos prontos para imprimir ou usar no celular</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DICAS DE ACESSIBILIDADE -->
+    <section id="dicas" class="secao secao-dicas" aria-labelledby="titulo-dicas">
+      <div class="container">
+        <h2 id="titulo-dicas">Dicas de acessibilidade web</h2>
+        <p class="intro-secao">
+          Princípios que usamos neste site (baseados no curso de Acessibilidade Web da Alura e nas diretrizes WCAG).
+        </p>
+
+        <div class="lista-dicas">
+          <div class="dica dica-1">
+            <h3>1. HTML semântico</h3>
+            <p>Usamos tags corretas (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>) para que leitores de tela entendam a estrutura da página.</p>
+          </div>
+
+          <div class="dica dica-2">
+            <h3>2. Navegação por teclado</h3>
+            <p>Tudo funciona com Tab, Enter e setas. Os elementos focáveis têm contorno visível e bem contrastado.</p>
+          </div>
+
+          <div class="dica dica-3">
+            <h3>3. Contraste e tipografia</h3>
+            <p>Fonte Atkinson Hyperlegible, tamanho generoso e opção de alto contraste.</p>
+          </div>
+
+          <div class="dica dica-4">
+            <h3>4. Redução de movimento</h3>
+            <p>Respeitamos a preferência <code>prefers-reduced-motion</code> e oferecemos um botão para desativar animações.</p>
+          </div>
+
+          <div class="dica dica-5">
+            <h3>5. Skip link</h3>
+            <p>O primeiro elemento focável permite pular direto para o conteúdo principal.</p>
+          </div>
+
+          <div class="dica dica-6">
+            <h3>6. Textos claros</h3>
+            <p>Linguagem simples, frases curtas e estrutura previsível — importante para muitas pessoas autistas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao secao-contato" aria-labelledby="titulo-contato">
+      <div class="container">
+        <h2 id="titulo-contato">Contato</h2>
+        <p class="intro-secao">Envie uma mensagem. Respondemos com calma e respeito.</p>
+
+        <form class="formulario" action="#" method="post" novalidate>
+          <div class="campo">
+            <label for="nome">Nome <span class="obrigatorio">(obrigatório)</span></label>
+            <input type="text" id="nome" name="nome" required autocomplete="name" aria-required="true">
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail <span class="obrigatorio">(obrigatório)</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" aria-required="true">
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem <span class="obrigatorio">(obrigatório)</span></label>
+            <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
+          </div>
+
+          <button type="submit" class="btn-principal">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>
+        <strong>Espaço Calmo</strong> — Site criado com foco em acessibilidade e neurodiversidade.
+      </p>
+      <p class="pequeno">
+        Baseado nas diretrizes WCAG 2.2 e nos princípios ensinados no curso de Acessibilidade Web da Alura.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
